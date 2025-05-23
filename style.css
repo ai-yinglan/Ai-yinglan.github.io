@@ -1,11 +1,23 @@
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  /* 渐变背景：由米白渐变至浅灰，且固定不随内容滚动 */
+  background: linear-gradient(135deg, #faf3e0 0%, #e3e3e3 100%) fixed;
   color: #333;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
 }
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+}
+main, .wrapper > *:not(nav):not(h1) {
+  max-width: 800px;
+  width: 100%;
+}
+
 h1, h2 {
   color: #2c3e50;
   border-bottom: 2px solid #ccc;
@@ -46,3 +58,25 @@ img {
     flex: 1 1 100%;
   }
 }
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(44, 62, 80, 0.3) 0,
+    rgba(44, 62, 80, 0.3) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  z-index: 0;
+}
+.wrapper::before { left: 0; }
+.wrapper::after  { right: 0; }

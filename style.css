@@ -6,13 +6,17 @@ body {
   color: #333;
 }
 .wrapper {
-  display: flex;
-  justify-content: center;
   padding: 40px 20px;
   background: rgba(255, 255, 255, 0.8);
   position: relative;
   z-index: 1;
 }
+
+main {
+  max-width: 800px;        /* 内容区宽度 */
+  margin: 0 auto;          /* 水平居中 */
+}
+
 main, .wrapper > *:not(nav):not(h1) {
   max-width: 800px;
   width: 100%;

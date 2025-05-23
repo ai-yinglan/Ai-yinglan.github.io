@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  /* 渐变背景：由米白渐变至浅灰，且固定不随内容滚动 */
-  background: linear-gradient(135deg, #faf3e0 0%, #e3e3e3 100%) fixed;
+  /* 全屏暖焰渐变背景，固定不随内容滚动 */
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%) fixed;
   color: #333;
+
 }
 
 .wrapper {

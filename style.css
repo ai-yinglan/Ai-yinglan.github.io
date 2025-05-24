@@ -79,17 +79,14 @@ img {
   top: 0;
   bottom: 0;
   width: 150px;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(44, 62, 80, 0.3) 0,
-    rgba(44, 62, 80, 0.3) 10px,
-    transparent 10px,
-    transparent 20px
-  );
+  /* 浅色点状花纹背景 */
+  background-image: radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+  background-size: 10px 10px;
   z-index: 0;
 }
 .wrapper::before { left: 0; }
-.wrapper::after  { right: 0; 
+.wrapper::after  { right: 0; }
+
                  /* 业务化“卡片”板块样式 */
 .section {
   background: white;

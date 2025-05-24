@@ -89,4 +89,13 @@ img {
   z-index: 0;
 }
 .wrapper::before { left: 0; }
-.wrapper::after  { right: 0; }
+.wrapper::after  { right: 0; 
+                 /* 业务化“卡片”板块样式 */
+.section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
